@@ -1,0 +1,550 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&family=Train+One&display=swap");
+/*-------------------------------
+base
+---------------------------------*/
+html {
+  font-size: 62.5%;
+}
+
+* *:before *:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  color: #454545;
+}
+
+a {
+  text-decoration: none;
+  color: #454545;
+}
+
+a:hover {
+  color: #454545;
+}
+
+p, h1, h2, h3, h4, h5, h6, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.content-width {
+  max-width: 1000px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.contents-size {
+  height: 100vh;
+  padding-bottom: 10%;
+}
+
+.logout {
+  width: 21rem;
+  height: 3rem;
+  max-width: 300px;
+  background: #ccc;
+  border-radius: 7px;
+  color: #fff;
+  font-weight: bold;
+  box-shadow: 2px 2px 0 #999;
+}
+
+.logout:hover {
+  box-shadow: 1px 1px 0 #999;
+}
+
+/*-------------------------------
+waypoint animation
+---------------------------------*/
+.animated {
+  opacity: 0;
+}
+
+/*-------------------------------
+login
+---------------------------------*/
+.login input {
+  width: 400px;
+  max-width: 500px;
+  height: 3rem;
+  font-size: 1.6rem;
+}
+.login h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1.4rem;
+  letter-spacing: 0.1em;
+}
+.login .submit-btn {
+  background: #84B1D9;
+  color: #fff;
+  border-radius: 5px;
+  width: 200px;
+  height: 3rem;
+  letter-spacing: 0.2em;
+  margin-top: 2rem;
+  box-shadow: 2px 2px 0 #ccc;
+}
+.login .submit-btn:hover {
+  box-shadow: 1px 1px 0 #ccc;
+}
+.login small {
+  font-size: 1rem;
+  color: #454545;
+}
+.login small a {
+  text-decoration: underline;
+  color: #84B1D9;
+}
+
+/*-------------------------------
+pagination
+---------------------------------*/
+.pagination {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 1rem 0;
+}
+.pagination .page-item .page-link {
+  font-size: 1.6rem;
+  padding: 0.3rem 2rem;
+  color: #84B1D9;
+}
+.pagination .active .page-link {
+  background: #84B1D9;
+  border-color: #84B1D9;
+  color: #fff;
+}
+
+/*-------------------------------
+app
+---------------------------------*/
+.app {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+/*-------------------------------
+header
+---------------------------------*/
+header {
+  width: 100%;
+  height: 30vh;
+  background: transparent;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+header .header-contents {
+  height: 100%;
+}
+header .header-contents .content-width {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  header .header-contents .content-width .content-width {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+  }
+}
+header .header-contents .content-width .logo {
+  font-size: 4rem;
+  font-weight: 900;
+  margin-bottom: 1.6rem;
+  font-family: "Train One", cursive;
+}
+header .header-contents .content-width .setting {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+}
+header .header-contents .content-width .setting .setting-btn {
+  transform: rotate(0);
+}
+header .header-contents .content-width .setting .setting-btn:hover {
+  color: #78BF97;
+  transform: rotate(360deg);
+  transition: all 0.75s ease;
+}
+header .header-contents .content-width .setting .home-btn:hover {
+  transform: scale(1);
+  color: #84B1D9;
+  transition: color 0.75s ease;
+  -webkit-animation: bounce 0.7s ease infinite;
+          animation: bounce 0.7s ease infinite;
+}
+@-webkit-keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  65% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  65% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*-------------------------------
+home
+---------------------------------*/
+.home {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.home .whine-form .modal-form {
+  width: 50vw;
+  height: 60vh;
+  background: #f5f5f5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 7px;
+}
+.home .whine-form .modal-form .textarea {
+  width: 40vw;
+  height: 40vh;
+  background: #fff;
+  border: 2px solid #777;
+  border-radius: 7px;
+  display: block;
+  margin: 3rem auto 0;
+}
+.home .whine-form .modal-form .submit-btn {
+  width: 40vw;
+  height: 3rem;
+  max-width: 50rem;
+  border-radius: 7px;
+  background: #84B1D9;
+  color: #fff;
+  display: block;
+  display: block;
+  margin: 1rem auto;
+}
+.home .whines {
+  background: #f5f5f5;
+  margin-bottom: 5rem;
+}
+.home .whines .whine-wrap {
+  background: #f5f5f5;
+  border: 0.5px solid #eee;
+}
+.home .whines .whine-wrap .whine {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem;
+  word-break: break-word;
+}
+.home .whines .whine-wrap .whine .sympathy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home .whines .whine-wrap .whine .sympathy .add-btn {
+  width: 100px;
+  height: 30px;
+  color: #F291AB;
+}
+.home .whines .whine-wrap .whine .sympathy .remove-btn {
+  width: 100px;
+  height: 100%;
+  color: #78BF97;
+}
+.home .whines small {
+  padding-left: 3rem;
+  color: #aaa;
+}
+.home .whines .reload {
+  cursor: pointer;
+  border: 0.5px solid #eee;
+  padding: 1rem 3rem;
+  display: flex;
+  justify-content: space-between;
+}
+.home .whines .reload .reload-btn {
+  width: 100px;
+  height: 30px;
+  color: #454545;
+  -webkit-animation: rotate 2s infinite;
+          animation: rotate 2s infinite;
+}
+@-webkit-keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.home .whines .reload p {
+  color: #999;
+}
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: #000;
+  opacity: 60%;
+  z-index: 4;
+}
+
+.pen-btn {
+  position: fixed;
+  z-index: 3;
+  bottom: 10vh;
+  right: 10vw;
+  color: purple;
+  background: #eee;
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  box-shadow: 0 0 3px #ccc;
+  -webkit-animation: heartbeat 2s ease infinite;
+          animation: heartbeat 2s ease infinite;
+}
+
+@-webkit-keyframes heartbeat {
+  0% {
+    box-shadow: 0 0 3px 2px #ccc;
+  }
+  50% {
+    box-shadow: 0 0 10px 5px #b478bf;
+  }
+  100% {
+    box-shadow: 0 0 3px 2px #ccc;
+  }
+}
+
+@keyframes heartbeat {
+  0% {
+    box-shadow: 0 0 3px 2px #ccc;
+  }
+  50% {
+    box-shadow: 0 0 10px 5px #b478bf;
+  }
+  100% {
+    box-shadow: 0 0 3px 2px #ccc;
+  }
+}
+/*-------------------------------
+tab
+*/
+.tabs ul {
+  display: flex;
+  -moz-column-gap: 0.3rem;
+       column-gap: 0.3rem;
+}
+.tabs ul li {
+  border-color: #eee;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px 5px 0 0;
+  padding: 1rem 4rem;
+  margin-bottom: -1px;
+  background: #aaa;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .tabs ul li {
+    padding: 1rem 2rem;
+    font-size: 1.3rem;
+  }
+}
+.tabs ul .active1 {
+  color: #84B1D9;
+  background: #f5f5f5;
+  border-color: #eee #eee transparent #eee;
+}
+.tabs ul .active2 {
+  color: #F291AB;
+  background: #f5f5f5;
+  border-color: #eee #eee transparent #eee;
+}
+.tabs ul .active3 {
+  color: #78BF97;
+  background: #f5f5f5;
+  border-color: #eee #eee transparent #eee;
+}
+
+/*-------------------------------
+fovorites
+---------------------------------*/
+.favorites h2 {
+  font-size: 2rem;
+  font-weight: 900;
+}
+.favorites .sympathy-whines {
+  background: #f5f5f5;
+}
+.favorites .sympathy-whines p {
+  padding: 1rem;
+  border: 0.5px solid #eee;
+}
+
+/*-------------------------------
+setting
+---------------------------------*/
+.profile h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.profile p {
+  margin: 1rem 0;
+}
+
+/*-------------------------------
+edit
+---------------------------------*/
+.edit-form h2 {
+  font-size: 3rem;
+  font-weight: 900;
+}
+.edit-form h2 span {
+  display: inline-block;
+  font-size: 1rem;
+  padding: 0 1rem;
+  cursor: pointer;
+}
+.edit-form h2 span:hover {
+  color: #78BF97;
+  -webkit-animation: vib 1s ease;
+          animation: vib 1s ease;
+}
+@-webkit-keyframes vib {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(0);
+  }
+  60% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+@keyframes vib {
+  0% {
+    transform: rotate(0);
+  }
+  20% {
+    transform: rotate(20deg);
+  }
+  40% {
+    transform: rotate(0);
+  }
+  60% {
+    transform: rotate(20deg);
+  }
+  80% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(0);
+  }
+}
+.edit-form .form {
+  width: 50vw;
+  height: 60vh;
+  background: #f5f5f5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 7px;
+}
+.edit-form .form .form-container {
+  width: 80%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.edit-form .form .form-container h2 {
+  font-size: 2rem;
+  font-weight: 900;
+  margin-top: 3rem;
+}
+.edit-form .form .form-container .form-wrap {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  width: 100%;
+  margin: 2rem auto;
+}
+.edit-form .form .form-container .form-wrap input {
+  width: 100%;
+  max-width: 500px;
+  height: 3rem;
+  font-size: 1.6rem;
+}
+.edit-form .form .form-container .submit-btn {
+  width: 40vw;
+  height: 3rem;
+  max-width: 50rem;
+  border-radius: 7px;
+  background: #84B1D9;
+  color: #fff;
+  display: block;
+  display: block;
+  margin: 1rem auto;
+  box-shadow: 2px 2px 0 #ccc;
+}
+.edit-form .form .form-container .submit-btn:hover {
+  box-shadow: 1px 1px 0 #ccc;
+}/*# sourceMappingURL=style.css.map */
