@@ -5508,16 +5508,7 @@ var render = function render() {
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("spit out")])])])])]), _vm._v(" "), _c("button", {
-    staticClass: "pen-btn",
-    on: {
-      click: function click($event) {
-        _vm.userModal = !_vm.userModal;
-      }
-    }
-  }, [_c("i", {
-    staticClass: "fas fa-pen fa-2x"
-  })])]);
+  }, [_vm._v("spit out")])])])])])]);
 };
 var staticRenderFns = [];
 render._withStripped = true;

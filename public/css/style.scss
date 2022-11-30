@@ -350,6 +350,10 @@ home
                 color:#999;
             }
 
+            & p:hover{
+                filter:brightness(60%);
+            }
+
         }
     }
 }

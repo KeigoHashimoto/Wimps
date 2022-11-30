@@ -323,6 +323,9 @@ home
 .home .whines .reload p {
   color: #999;
 }
+.home .whines .reload p:hover {
+  filter: brightness(60%);
+}
 
 .overlay {
   width: 100vw;

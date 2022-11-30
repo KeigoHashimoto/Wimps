@@ -23,7 +23,6 @@
                 </div>
             </div>
         </div>
-        <button @click="userModal = !userModal" class="pen-btn"><i class="fas fa-pen fa-2x"></i></button>
     </div>
 </template>
 
