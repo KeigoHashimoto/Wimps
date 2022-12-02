@@ -419,6 +419,9 @@ tab
             background: #aaa;
             cursor:pointer;
         }
+        .tab:not(.active1,.active2,.active3):hover{
+            filter:brightness(120%);
+        }
 
         @media screen and (max-width: 767px) {
             li {

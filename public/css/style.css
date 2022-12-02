@@ -396,6 +396,9 @@ tab
   background: #aaa;
   cursor: pointer;
 }
+.tabs ul .tab:not(.active1, .active2, .active3):hover {
+  filter: brightness(120%);
+}
 @media screen and (max-width: 767px) {
   .tabs ul li {
     padding: 1rem 2rem;
