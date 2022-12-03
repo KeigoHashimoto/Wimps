@@ -3,7 +3,12 @@
         <div v-show="whineModal">
             <div class="overlay" @click="whineModal = !whineModal"></div>
             <div class="modal-form">
-                <form action="whine/post" method="post">
+                <form action="/whine/post" method="post" v-if="hostname == 'localhost'">
+                    <input type="hidden" name="_token" :value="csrf">
+                    <textarea name="whine" id="whine" class="textarea" cols="100" rows="10" placeholder="ここに弱音を吐いてください。弱音以外は禁止です。"></textarea>
+                    <button type="submit" class="submit-btn">spit out</button>
+                </form>
+                <form action="/Wimps/whine/post" method="post" v-if="hostname != 'localhost'">
                     <input type="hidden" name="_token" :value="csrf">
                     <textarea name="whine" id="whine" class="textarea" cols="100" rows="10" placeholder="ここに弱音を吐いてください。弱音以外は禁止です。"></textarea>
                     <button type="submit" class="submit-btn">spit out</button>
@@ -20,6 +25,7 @@ export default {
         return{
             whineModal: false,
             csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+            hostname:document.location.hostname,
         }
     },
 

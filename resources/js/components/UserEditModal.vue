@@ -7,7 +7,7 @@
             <div class="form">
                 <div class="form-container">
                     <h2>Profile Edit</h2>
-                    <form action="user/update" method="post">
+                    <form action="/Wimps/user/update" method="post">
                         <input type="hidden" name="_method" value="PUT">
                         <input type="hidden" name="_token" :value="csrf">
                         <div class="form-wrap">
