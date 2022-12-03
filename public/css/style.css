@@ -174,13 +174,14 @@ welcome
 }
 
 @media screen and (max-width: 767px) {
+  .register {
+    width: 100%;
+  }
   .register a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    height: 4rem;
+    width: 100%;
+    height: 5rem;
     border-radius: 10px;
+    margin: 0 auto;
   }
 }
 .welcome {
