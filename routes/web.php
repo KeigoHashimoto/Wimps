@@ -64,7 +64,7 @@ Route::prefix('user')->name('user.')->group(function() {
 });
 
 //whine function
-Route::prefix('whine')->name('whine.')->group(function() {
+Route::prefix('/whine')->name('whine.')->group(function() {
     Route::middleware(['auth:web'])->group(function() {
         //whine post
         Route::post('post',[WhinesController::class,'post'])->name('post'); 
