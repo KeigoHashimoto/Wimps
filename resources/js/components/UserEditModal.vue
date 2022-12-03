@@ -7,7 +7,7 @@
             <div class="form">
                 <div class="form-container">
                     <h2>Profile Edit</h2>
-                    <form action="/Wimps/user/update" method="post">
+                    <form :action="host" method="post">
                         <input type="hidden" name="_method" value="PUT">
                         <input type="hidden" name="_token" :value="csrf">
                         <div class="form-wrap">
@@ -32,6 +32,7 @@ export default {
         return {
             userModal:false,
             csrf:document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+            userEdit: '',
         };
     },
     props: {
@@ -39,6 +40,17 @@ export default {
             type:Object,
         },
     },
+    computed: {
+        host(){
+            const hostName=document.location.hostname;
+            if(hostName == 'localhost'){
+                this.userEdit = '/user/update';
+            }else{
+                this.userEdit = '/Wimps/user/update';
+            };
+            return this.userEdit;
+        },
+    }
 }
 </script>
 

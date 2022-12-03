@@ -5336,12 +5336,25 @@ __webpack_require__.r(__webpack_exports__);
   data: function data() {
     return {
       userModal: false,
-      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content')
+      csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
+      userEdit: ''
     };
   },
   props: {
     user: {
       type: Object
+    }
+  },
+  computed: {
+    host: function host() {
+      var hostName = document.location.hostname;
+      if (hostName == 'localhost') {
+        this.userEdit = '/user/update';
+      } else {
+        this.userEdit = '/Wimps/user/update';
+      }
+      ;
+      return this.userEdit;
     }
   }
 });
@@ -5379,8 +5392,20 @@ __webpack_require__.r(__webpack_exports__);
     return {
       whineModal: false,
       csrf: document.querySelector('meta[name="csrf-token"]').getAttribute('content'),
-      hostname: document.location.hostname
+      whinePost: ''
     };
+  },
+  computed: {
+    host: function host() {
+      var hostName = document.location.hostname;
+      if (hostName == 'localhost') {
+        this.whinePost = '/whine/post';
+      } else {
+        this.whinePost = 'Wimps/whine/post';
+      }
+      ;
+      return this.whinePost;
+    }
   }
 });
 
@@ -5470,7 +5495,7 @@ var render = function render() {
     staticClass: "form-container"
   }, [_c("h2", [_vm._v("Profile Edit")]), _vm._v(" "), _c("form", {
     attrs: {
-      action: "/Wimps/user/update",
+      action: _vm.host,
       method: "post"
     }
   }, [_c("input", {
@@ -5614,36 +5639,9 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("div", {
     staticClass: "modal-form"
-  }, [_vm.hostname == "localhost" ? _c("form", {
+  }, [_vm.hostname != "localhost" ? _c("form", {
     attrs: {
-      action: "/whine/post",
-      method: "post"
-    }
-  }, [_c("input", {
-    attrs: {
-      type: "hidden",
-      name: "_token"
-    },
-    domProps: {
-      value: _vm.csrf
-    }
-  }), _vm._v(" "), _c("textarea", {
-    staticClass: "textarea",
-    attrs: {
-      name: "whine",
-      id: "whine",
-      cols: "100",
-      rows: "10",
-      placeholder: "ここに弱音を吐いてください。弱音以外は禁止です。"
-    }
-  }), _vm._v(" "), _c("button", {
-    staticClass: "submit-btn",
-    attrs: {
-      type: "submit"
-    }
-  }, [_vm._v("spit out")])]) : _vm._e(), _vm._v(" "), _vm.hostname != "localhost" ? _c("form", {
-    attrs: {
-      action: "/Wimps/whine/post",
+      action: _vm.host,
       method: "post"
     }
   }, [_c("input", {
