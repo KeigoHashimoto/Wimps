@@ -5573,15 +5573,7 @@ var staticRenderFns = [function () {
     attrs: {
       href: "user/register"
     }
-  }, [_vm._v("今すぐ会員登録(無料)")])])]), _vm._v(" "), _c("div", {
-    staticClass: "discription"
-  }, [_c("h3", [_vm._v("このSNSは、普段内に込めた"), _c("span", [_vm._v("弱音")]), _vm._v("を放出することだけに着目したSNSです。")]), _vm._v(" "), _c("p", [_vm._v("\n                  自分の弱音を放出すること、人が弱音に共感することで、また明日を生きられる。"), _c("br"), _vm._v("\n                  そんなアプリを目指しております。\n              ")]), _vm._v(" "), _c("button", {
-    staticClass: "register"
-  }, [_c("a", {
-    attrs: {
-      href: "user/register"
-    }
-  }, [_vm._v("今すぐ会員登録(無料)")])])])])])]);
+  }, [_vm._v("今すぐ会員登録"), _c("br"), _vm._v("(無料)")])])])])])]);
 }];
 render._withStripped = true;
 

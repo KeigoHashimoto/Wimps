@@ -18,10 +18,10 @@
                     <li>リアクションは共感を示すハートだけ</li>
                 </ul>
 
-                <button class="register"><a href="user/register">今すぐ会員登録(無料)</a></button>
+                <button class="register"><a href="user/register">今すぐ会員登録<br/>(無料)</a></button>
             </div>
 
-            <div class="discription">
+            <!-- <div class="discription">
                 <h3>このSNSは、普段内に込めた<span>弱音</span>を放出することだけに着目したSNSです。</h3>
                 <p>
                     自分の弱音を放出すること、人が弱音に共感することで、また明日を生きられる。<br/>
@@ -30,7 +30,7 @@
 
                 <button class="register"><a href="user/register">今すぐ会員登録(無料)</a></button>
 
-            </div>
+            </div> -->
         </div>
     </div>
   </div>
