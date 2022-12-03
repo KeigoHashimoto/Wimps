@@ -5640,7 +5640,7 @@ var render = function render() {
     }
   }), _vm._v(" "), _c("div", {
     staticClass: "modal-form"
-  }, [_vm.hostname != "localhost" ? _c("form", {
+  }, [_c("form", {
     attrs: {
       action: _vm.host,
       method: "post"
@@ -5667,7 +5667,7 @@ var render = function render() {
     attrs: {
       type: "submit"
     }
-  }, [_vm._v("spit out")])]) : _vm._e()])]), _vm._v(" "), _c("button", {
+  }, [_vm._v("spit out")])])])]), _vm._v(" "), _c("button", {
     staticClass: "pen-btn",
     on: {
       click: function click($event) {
