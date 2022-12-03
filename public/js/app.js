@@ -5396,12 +5396,13 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   computed: {
+    // localhostと本番環境の違い解消
     host: function host() {
       var hostName = document.location.hostname;
       if (hostName == 'localhost') {
         this.whinePost = '/whine/post';
       } else {
-        this.whinePost = 'Wimps/whine/post';
+        this.whinePost = '/Wimps/whine/post';
       }
       ;
       return this.whinePost;

@@ -25,12 +25,13 @@ export default {
         }
     },
     computed:{
+        // localhostと本番環境の違い解消
         host(){
             const hostName=document.location.hostname;
             if(hostName == 'localhost'){
                 this.whinePost = '/whine/post';
             }else{
-                this.whinePost = 'Wimps/whine/post';
+                this.whinePost = '/Wimps/whine/post';
             };
             return this.whinePost;
         },
