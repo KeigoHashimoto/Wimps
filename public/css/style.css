@@ -366,6 +366,15 @@ home
   display: block;
   margin: 1rem auto;
 }
+@media screen and (max-width: 767px) {
+  .home .whine-form .modal-form {
+    width: 80vw;
+  }
+  .home .whine-form .modal-form .textarea {
+    width: 70vw;
+    height: 40vh;
+  }
+}
 .home .whines {
   background: #f5f5f5;
   margin-bottom: 5rem;
@@ -510,7 +519,7 @@ tab
 }
 @media screen and (max-width: 767px) {
   .tabs ul li {
-    padding: 1rem 2rem;
+    padding: 1rem 3rem;
     font-size: 1.3rem;
   }
 }

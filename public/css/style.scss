@@ -411,6 +411,17 @@ home
 
             }
         }
+
+        @media screen and (max-width: 767px) {
+            .modal-form {
+                width: 80vw;
+
+                .textarea{
+                    width: 70vw;
+                    height: 40vh;    
+                }
+            }
+        }
     }
     
     .whines{
@@ -552,7 +563,7 @@ tab
 
         @media screen and (max-width: 767px) {
             li {
-                padding: 1rem 2rem;
+                padding: 1rem 3rem;
                 font-size:1.3rem;
             }
         }
