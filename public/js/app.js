@@ -5469,7 +5469,7 @@ var render = function render() {
     staticClass: "form-container"
   }, [_c("h2", [_vm._v("Profile Edit")]), _vm._v(" "), _c("form", {
     attrs: {
-      action: "/user/update",
+      action: "user/update",
       method: "post"
     }
   }, [_c("input", {
@@ -5615,7 +5615,7 @@ var render = function render() {
     staticClass: "modal-form"
   }, [_c("form", {
     attrs: {
-      action: "/whine/post",
+      action: "whine/post",
       method: "post"
     }
   }, [_c("input", {
