@@ -28,4 +28,10 @@ class WhinesController extends Controller
         return $this->belongsToMany(User::class,'sympathys','whine_id','users_id');
     }
 
+    public function destroy($id)
+    {
+        $whine = Whine::findOrFail($id);
+        $whine->delete();
+        return redirect()->back()->with('delete','弱音を削除しました。');
+    }
 }

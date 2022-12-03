@@ -40,6 +40,6 @@ const app = new Vue({
     methods:{
         reload(){
             window.location.reload();
-        }
+        },
     }
 });

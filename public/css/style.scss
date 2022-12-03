@@ -472,22 +472,34 @@ home
                 justify-content: space-between;
                 padding: 3rem ;
                 word-break:break-word;
-                & .sympathy{
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    & .icons{
+                        display: flex;
+                        column-gap:1rem;
 
-                    & .add-btn{
-                        width: 100px;
-                        height: 30px;
-                        color:$add;
-                    }
+                        & .sympathy{
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
 
-                    & .remove-btn{
-                        width: 100px;
-                        height: 100%;
-                        color:$remove;
-                    }
+                            & .add-btn{
+                                width: 100px;
+                                height: 30px;
+                                color:$add;
+                            }
+
+                            & .remove-btn{
+                                width: 100px;
+                                height: 100%;
+                                color:$remove;
+                            }
+                        }
+
+                        & .delete-btn{
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            color:rgb(172, 0, 0);
+                        }
                 }                   
             }
         }
