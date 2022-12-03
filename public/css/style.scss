@@ -277,9 +277,10 @@ welcome
         display: flex;
         justify-content: space-around;
         align-items: flex-end;
+        width: 100%;
         ul{
             li{
-                width:fit-content;
+                width:100%;
                 padding:1rem 2rem;
                 font-size:3rem;
                 font-weight:bold;
