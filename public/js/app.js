@@ -5563,7 +5563,7 @@ var staticRenderFns = [function () {
     staticClass: "login"
   }, [_c("a", {
     attrs: {
-      href: "/user/login"
+      href: "user/login"
     }
   }, [_vm._v("Login")])])]), _vm._v(" "), _c("div", {
     staticClass: "point"
@@ -5571,7 +5571,7 @@ var staticRenderFns = [function () {
     staticClass: "register"
   }, [_c("a", {
     attrs: {
-      href: "/user/register"
+      href: "user/register"
     }
   }, [_vm._v("今すぐ会員登録(無料)")])])]), _vm._v(" "), _c("div", {
     staticClass: "discription"
@@ -5579,7 +5579,7 @@ var staticRenderFns = [function () {
     staticClass: "register"
   }, [_c("a", {
     attrs: {
-      href: "/user/register"
+      href: "user/register"
     }
   }, [_vm._v("今すぐ会員登録(無料)")])])])])])]);
 }];

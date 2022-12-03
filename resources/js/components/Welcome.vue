@@ -8,7 +8,7 @@
                     <h1>Wimps</h1>
                 </div>
     
-                <button class="login"><a href="/user/login">Login</a></button>
+                <button class="login"><a href="user/login">Login</a></button>
             </div>
             
             <div class="point">
@@ -18,7 +18,7 @@
                     <li>リアクションは共感を示すハートだけ</li>
                 </ul>
 
-                <button class="register"><a href="/user/register">今すぐ会員登録(無料)</a></button>
+                <button class="register"><a href="user/register">今すぐ会員登録(無料)</a></button>
             </div>
 
             <div class="discription">
@@ -28,7 +28,7 @@
                     そんなアプリを目指しております。
                 </p>
 
-                <button class="register"><a href="/user/register">今すぐ会員登録(無料)</a></button>
+                <button class="register"><a href="user/register">今すぐ会員登録(無料)</a></button>
 
             </div>
         </div>
