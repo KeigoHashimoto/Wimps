@@ -8,7 +8,6 @@
         @endif
         <user-edit-modal :user="{{ $user }}"></user-edit-modal>
         <div class="profile">
-            
             <p>Name : {{ $user->name }}</p>
             <p>Mail : {{ $user->email }}</p>
         </div>

@@ -136,6 +136,113 @@ app
 }
 
 /*-------------------------------
+welcome
+---------------------------------*/
+.register {
+  margin-top: 2rem;
+}
+.register a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 35rem;
+  height: 6rem;
+  border-radius: 5px;
+  background: #F291AB;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 0 #ccc;
+  margin: 3rem 0;
+}
+.register a:hover {
+  box-shadow: 1px 1px 0 #ccc;
+}
+.register a:before {
+  content: "";
+  width: 3rem;
+  height: 300%;
+  position: absolute;
+  top: -4rem;
+  left: 0;
+  transform: translate(-10rem, 0) rotate(-45deg);
+  background: #fff;
+}
+.register a:hover:before {
+  transform: translate(50rem, 0) rotate(-45deg);
+  transition: transform 0.5s ease;
+}
+
+.welcome {
+  background-image: url(../images/background.jpg);
+  background-size: cover;
+  background-repeat: repeat;
+}
+.welcome .header-wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 3rem 0;
+}
+.welcome .header-wrap .welcome-logo h1 {
+  font-size: 5rem;
+  font-weight: 900;
+}
+.welcome .header-wrap .login {
+  margin-top: 2rem;
+}
+.welcome .header-wrap .login a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 12rem;
+  height: 4rem;
+  border-radius: 5px;
+  background: #84B1D9;
+  color: #fff;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 2px 2px 0 #ccc;
+}
+.welcome .header-wrap .login a:hover {
+  box-shadow: 1px 1px 0 #ccc;
+}
+.welcome .header-wrap .login a:before {
+  content: "";
+  width: 6rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-200%, 0);
+  background: linear-gradient(45deg, #78BF97, #b478bf);
+}
+.welcome .header-wrap .login a:hover:before {
+  transform: translate(200%, 0);
+  transition: transform 0.7s ease;
+}
+.welcome .point {
+  padding: 5rem 0;
+}
+.welcome .point ul li {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  background: #f5f5f5;
+  border-radius: 7px;
+}
+.welcome .point ul li + li {
+  margin-top: 1.3rem;
+}
+.welcome .discription h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 2rem 0;
+}
+
+/*-------------------------------
 header
 ---------------------------------*/
 header {
@@ -444,7 +551,9 @@ setting
   font-weight: 900;
 }
 .profile p {
+  width: 80%;
   margin: 1rem 0;
+  word-break: break-word;
 }
 
 /*-------------------------------

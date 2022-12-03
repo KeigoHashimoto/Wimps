@@ -121,7 +121,6 @@ login
     }
 }
 
-
 /*-------------------------------
 pagination
 ---------------------------------*/
@@ -159,6 +158,133 @@ app
     background-image:url('../images/background.jpg');
     background-size: cover;
     background-position: center ;
+}
+
+/*-------------------------------
+welcome
+---------------------------------*/
+.register{
+    margin-top: calc(4rem / 2);
+    a{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 35rem;
+        height: 6rem;
+        border-radius:5px;
+        background: $add;
+        color:#fff;
+        position:relative;
+        overflow:hidden;
+        box-shadow:2px 2px 0 #ccc;
+        margin:3rem 0;
+    }
+    a:hover{
+        box-shadow:1px 1px 0 #ccc;
+    }
+
+
+    a:before{
+        content:"";
+        width:3rem;
+        height: 300%;
+        position:absolute;
+        top: -4rem;
+        left: 0;
+        transform:translate(-10rem,0) rotate(-45deg);
+        background:#fff;
+    }
+
+    a:hover:before{
+        transform:translate(50rem,0) rotate(-45deg);
+        transition:transform .5s ease;
+    }
+}
+
+.welcome{
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-repeat: repeat;
+
+    .header-wrap{
+        display: flex;
+        justify-content: space-between;
+        padding:3rem 0;
+
+        .welcome-logo{
+            small{
+                
+            }
+            h1{
+                font-size:5rem;
+                font-weight:900;
+            }
+        }
+
+        .login{
+            margin-top: calc(4rem / 2);
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 12rem;
+                height: 4rem;
+                border-radius:5px;
+                background: $submit;
+                color:#fff;
+                position:relative;
+                overflow:hidden;
+                box-shadow:2px 2px 0 #ccc;
+            }
+            a:hover{
+                box-shadow:1px 1px 0 #ccc;
+            }
+
+
+            a:before{
+                content:"";
+                width:6rem;
+                height: 100%;
+                position:absolute;
+                top: 0;
+                left: 0;
+                transform:translate(-200%,0);
+                background:linear-gradient(45deg,$remove,$purple);
+            }
+
+            a:hover:before{
+                transform:translate(200%,0);
+                transition:transform .7s ease;
+            }
+        }
+    }
+
+    .point{
+        padding:5rem 0;
+        
+        ul{
+            li{
+                width:fit-content;
+                padding:1rem 2rem;
+                font-size:3rem;
+                font-weight:bold;
+                background: $gray;
+                border-radius:7px;
+            }
+            li + li{
+                margin-top: 1.3rem;
+            }
+        }
+        
+    }
+
+    .discription{
+        h3{
+            font-size:2rem;
+            font-weight:bold;
+            margin: 2rem 0;
+        }
+    }
 }
 
 /*-------------------------------
@@ -476,7 +602,9 @@ setting
         font-weight:900;
     }
     p{
+        width: 80%;
         margin: 1rem 0;
+        word-break:break-word;
     }
 }
 

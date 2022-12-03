@@ -17,7 +17,9 @@ use App\Http\Controllers\SympathyController;
 |
 */
 
-
+Route::get('/',function(){
+    return view('welcome');
+});
 
 //guest user function
 Route::prefix('user')->name('user.')->group(function() {
