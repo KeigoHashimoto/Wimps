@@ -2,7 +2,7 @@
     <div class="header-contents">
         <div class="content-width">
             <h1 class="logo">
-                <a href="{{ route('user.home') }}"><img class="header-logo" src="../images/logo.png" alt=""></a>
+                <a href="{{ route('user.home') }}"><img class="header-logo" src="{{ asset("images/logo.png") }}" alt=""></a>
             </h1>
     
             <div class="setting">
