@@ -1,7 +1,7 @@
 {{-- whine sympathy --}}
 <div class="whines" v-show="tab === 'tab2'">
     @if($sympathys->isEmpty())
-        <p class="empty-msg">まだ共感した弱音はありません</p>
+        <p class="empty-msg">まだ共感した弱音はありません。</p>
     @else
         {{-- whine tweet --}}
         @foreach($sympathys as $whine)

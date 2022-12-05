@@ -61,6 +61,10 @@ li {
   box-shadow: 1px 1px 0 #999;
 }
 
+.empty-msg {
+  padding: 1.5rem 2rem;
+}
+
 /*-------------------------------
 waypoint animation
 ---------------------------------*/
