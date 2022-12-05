@@ -5586,7 +5586,13 @@ var staticRenderFns = [function () {
     staticClass: "header-wrap"
   }, [_c("div", {
     staticClass: "welcome-logo"
-  }, [_c("small", [_vm._v("弱音限定、SNS")]), _vm._v(" "), _c("h1", [_vm._v("Wimps")])]), _vm._v(" "), _c("button", {
+  }, [_c("img", {
+    staticClass: "welcome-logo",
+    attrs: {
+      src: "images/logo.png",
+      alt: "weolcome page logo"
+    }
+  })]), _vm._v(" "), _c("button", {
     staticClass: "login"
   }, [_c("a", {
     attrs: {

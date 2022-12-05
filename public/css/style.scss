@@ -163,14 +163,17 @@ app
 /*-------------------------------
 welcome
 ---------------------------------*/
+.welcome-logo{
+    height: 12rem;
+}
 .register{
-    margin-top: calc(4rem / 2);
+    margin-right: 5rem;
     a{
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 15rem;
-        height: 15rem;
+        width: 20rem;
+        height: 20rem;
         border-radius:50%;
         background: $add;
         color:#fff;
@@ -187,7 +190,7 @@ welcome
     a:before{
         content:"";
         width:3rem;
-        height: 300%;
+        height: 50rem;
         position:absolute;
         top: -8rem;
         left: 0;
@@ -197,7 +200,7 @@ welcome
 
     a:hover:before{
         transform:translate(50rem,0) rotate(-45deg);
-        transition:transform .5s ease;
+        transition:transform .6s ease;
     }
 }
 
@@ -222,7 +225,7 @@ welcome
     .header-wrap{
         display: flex;
         justify-content: space-between;
-        padding:3rem 0;
+        padding:3rem 0 ;
 
         .welcome-logo{
             small{
@@ -256,32 +259,32 @@ welcome
 
             a:before{
                 content:"";
-                width:6rem;
-                height: 100%;
+                width:2rem;
+                height: 500%;
                 position:absolute;
-                top: 0;
+                top: -10rem;
                 left: 0;
-                transform:translate(-200%,0);
-                background:linear-gradient(45deg,$remove,$purple);
+                transform:translate(-400%,0) rotate(-45deg);
+                background:#fff;
             }
 
             a:hover:before{
-                transform:translate(200%,0);
-                transition:transform .7s ease;
+                transform:translate(600%,0) rotate(-45deg);
+                transition:transform .25s ease;
             }
         }
     }
 
     .point{
-        padding:5rem 0;
+        padding:1rem 0;
         display: flex;
-        justify-content: space-around;
+        justify-content: space-between;
         align-items: flex-end;
         width: 100%;
         ul{
             li{
                 width:100%;
-                padding:1rem 2rem;
+                padding:1rem;
                 font-size:3rem;
                 font-weight:bold;
                 background: $gray;
@@ -356,10 +359,9 @@ header{
             }
 
             .logo{
-                font-size:4rem;
-                font-weight:900;
-                margin-bottom: 1.6rem;
-                font-family: $train;
+                .header-logo{
+                    height: 10rem;
+                } 
             }
 
             .setting{

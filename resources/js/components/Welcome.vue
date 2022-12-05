@@ -4,8 +4,7 @@
         <div class="content-width">
             <div class="header-wrap">
                 <div class="welcome-logo">
-                    <small>弱音限定、SNS</small>
-                    <h1>Wimps</h1>
+                    <img src="images/logo.png" alt="weolcome page logo" class="welcome-logo">
                 </div>
     
                 <button class="login"><a href="user/login">Login</a></button>
