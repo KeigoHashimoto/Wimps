@@ -8,7 +8,7 @@
                 <p class="alert alert-success">{{ Session::get('success') }}</p>
             @endif
             @if(Session::has('error'))
-                <p class="alert alert-error">{{ Session::get('error') }}</p>
+                <p class="alert alert-danger">{{ Session::get('error') }}</p>
             @endif
             <h1>User Login</h1>
             <form action='{{ route('user.doLogin') }}' method="POST">

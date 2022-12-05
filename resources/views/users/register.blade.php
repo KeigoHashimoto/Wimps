@@ -5,7 +5,7 @@
     <div class="content-width">
         <div class="form">
             @if(Session::has('error'))
-                <p class="alert alert-error">{{ Session::get('error') }}</p>
+                <p class="alert alert-danger">{{ Session::get('error') }}</p>
             @endif
     
             <h1>User Registration</h1>
