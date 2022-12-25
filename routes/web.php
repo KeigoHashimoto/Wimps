@@ -16,9 +16,10 @@ use App\Http\Controllers\SympathyController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/',function(){
-    return view('welcome');
+Route::middleware(['guest:web'])->group(function(){
+    Route::get('/',function(){
+        return view('welcome');
+    });
 });
 
 //guest user function
@@ -78,11 +79,13 @@ Route::prefix('whine')->name('whine.')->group(function() {
 });
 
 //sympathy function
-Route::prefix('sympathy')->name('sympathy.')->group(function() {
+Route::prefix('sympathy/{whineId}')->name('sympathy.')->group(function() {
     Route::middleware(['auth:web'])->group(function() {
+        //liked
+        Route::get('liked',[SympathyController::class,'liked'])->name('liked');
         //add sympathy
-        Route::post('{whineId}/add_sympathy',[SympathyController::class,'add_sympathy'])->name('add'); 
-        //add sympathy
-        Route::post('{whineId}/remove_sympathy',[SympathyController::class,'remove_sympathy'])->name('remove'); 
+        Route::post('add_sympathy',[SympathyController::class,'add_sympathy'])->name('add'); 
+        //remove sympathy
+        Route::post('remove_sympathy',[SympathyController::class,'remove_sympathy'])->name('remove'); 
     });
 });

@@ -19,4 +19,10 @@ class SympathyController extends Controller
         Auth::user()->remove_sympathy($whineId);
         return redirect()->back();
     }
+
+    public function liked($whineId)
+    {
+        $whine = Whine::findOrFail($id);
+        $whine->relationshipLoadCount();
+    }
 }

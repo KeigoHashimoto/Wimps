@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Whine;
+use App\Events\WhinePostEvent;
 use Auth;
 
 class WhinesController extends Controller
@@ -18,14 +19,13 @@ class WhinesController extends Controller
             'ip' => $request->ip(),
             'user_id' => Auth::user()->id,
         ]);
+
+        // pusherにwhineを送る
+        event(new WhinePostEvent($whine));
+
         return redirect()
                 ->back()
                 ->with('whine','弱音を吐きました。すっきりしましたか？');
-    }
-
-    public function sympathy_users()
-    {
-        return $this->belongsToMany(User::class,'sympathys','whine_id','users_id');
     }
 
     public function destroy($id)

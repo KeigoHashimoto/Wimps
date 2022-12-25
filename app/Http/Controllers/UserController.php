@@ -10,6 +10,12 @@ use Auth;
 
 class UserController extends Controller
 {
+    /**
+     * registration
+     *
+     * @param Request $request
+     * @return void
+     */
     public function store(Request $request)
     {
         $request->validate([
@@ -26,6 +32,12 @@ class UserController extends Controller
         return redirect()->route('user.login')->with('success','会員登録しました。ログインしてください。');
     }
 
+    /**
+     * login
+     *
+     * @param Request $request
+     * @return void
+     */
     public function doLogin(Request $request)
     {
         $request->validate([
@@ -40,11 +52,17 @@ class UserController extends Controller
         }
     }
 
+    /**
+     * logout
+     *
+     * @return void
+     */
     public function logout()
     {
         Auth::logout();
         return back();
     }
+
 
     public function home()
     {

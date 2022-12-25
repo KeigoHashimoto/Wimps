@@ -31,7 +31,6 @@
         <title>Welcom to Wimps</title>
     </head>
     <body>
-
         <div id="app">
             <welcome></welcome>
         </div>

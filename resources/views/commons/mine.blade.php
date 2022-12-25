@@ -14,12 +14,18 @@
                                 {{ Form::open(['route'=>['sympathy.add',$whine->id],'method'=>'post']) }}
                                     {{ Form::button('<i class="fas fa-heart"></i>',['class'=>'add-btn','type'=>'submit']) }}
                                 {{ Form::close() }}
+                                
                             @else
-                                {{ Form::open(['route'=>['sympathy.remove',$whine->id],'method'=>'post']) }}
-                                    {{ Form::button('<i class="fas fa-heart-broken"></i>',['class'=>'remove-btn','type'=>'submit']) }}
-                                {{ Form::close() }}
+                                <div class="favorite">
+                                    {{ Form::open(['route'=>['sympathy.remove',$whine->id],'method'=>'post']) }}
+                                        {{ Form::button('<i class="fas fa-heart"></i>',['class'=>'remove-btn','type'=>'submit']) }}
+                                    {{ Form::close() }}
+                                </div>
                             @endif
+                            <p>{{ $whine->sympathy_users->count() }}</p>
                         </div>
+                        
+
                         
                         @if($whine->user->id == Auth::user()->id)
                             <div class="delete-btn">

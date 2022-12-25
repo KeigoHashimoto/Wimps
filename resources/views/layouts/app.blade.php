@@ -7,30 +7,27 @@
         <meta name="discription" content="">
 
         <!-- OGPタグ -->
-        <meta property="og:site_name" content=""/>
-        <meta property="og:title" content="">
-        <meta property="og:description" content="">
+        <meta property="og:site_name" content="Wimps"/>
+        <meta property="og:title" content="Wimps">
+        <meta property="og:description" content="弱音限定SNS。ただ聞いてほしいだけ。弱音を吐いて楽になろう。">
         <meta property="og:type" content="article">
-        <meta property="og:url" content="">
-        <meta property="og:image" content="">
+        <meta property="og:url" content="https://blackcat-bear.sakura.ne.jp/Wimps/">
+        <meta property="og:image" content="{{asset('images/wimps_bunner.png')  }}">
         <meta property="og:locale" content="ja_JP">
 
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <!--リセットcss-->
         <link rel="stylesheet" href="https://unpkg.com/ress@4.0.0/dist/ress.min.css">
-
-        <!--magnific-popup-->
-        <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
-
+        
         <!-- animate -->
         <link rel="stylesheet" href="{{asset('css/animate.css')}}">
 
         <!--main-css-->
-        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        <link rel="stylesheet" href="{{mix('css/app.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
-        <title>whine</title>
+        <title>弱音限定SNS Wimps</title>
     </head>
     <body>
 
@@ -48,17 +45,11 @@
         <!--waypoint-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/3.0.0/jquery.waypoints.min.js"></script>
 
-        <!--swiper-->
-        <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-        <!--magnific-popup-->
-        <script src="{{asset('js/jquery.magnific-popup.min.js')}}"></script>
-
         <!--font-awesome-->
         <script src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 
         <!--main-javaScript-->
-        <script src="{{asset('js/app.js')}}"></script>
+        <script src="{{mix('js/app.js')}}"></script>
         <script src="{{asset('js/main.js')}}"></script>
     </body>
 </html>

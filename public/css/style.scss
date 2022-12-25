@@ -85,8 +85,8 @@ login
 .login{
 
     input{
-        width: 400px;
-        max-width:500px;
+        width: 40rem;
+        max-width: 100%;;
         height:3rem;
         font-size:1.6rem;
     }
@@ -115,6 +115,8 @@ login
 
     small{
         font-size:1rem;
+        display: block;
+        margin-top: 1rem;
         color:$fontColor;
 
         a{
@@ -211,8 +213,10 @@ welcome
 @media screen and (max-width: 767px) {
     .register {
         width: 100%;
+        margin: 2rem auto;
         a{
-            width: 100%;
+            width: 80%;
+            display: block;
             height: 5rem;
             border-radius:10px;
             margin: 0 auto;
@@ -225,6 +229,7 @@ welcome
     background-image: url(../images/background.jpg);
     background-size: cover;
     background-repeat: repeat;
+    height: 100vh;
 
     .header-wrap{
         display: flex;
@@ -232,9 +237,6 @@ welcome
         padding:3rem 0 ;
 
         .welcome-logo{
-            small{
-                
-            }
             h1{
                 font-size:5rem;
                 font-weight:900;
@@ -247,7 +249,7 @@ welcome
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 12rem;
+                width: 15rem;
                 height: 4rem;
                 border-radius:5px;
                 background: $submit;
@@ -273,7 +275,7 @@ welcome
             }
 
             a:hover:before{
-                transform:translate(600%,0) rotate(-45deg);
+                transform:translate(800%,0) rotate(-45deg);
                 transition:transform .25s ease;
             }
         }
@@ -298,17 +300,25 @@ welcome
                 margin-top: 1.3rem;
             }
         }
+        .login-mobile{
+            display: none;
+
+        }
         
     }
 
     @media screen and (max-width: 767px) {
+        .login{
+            display: none;
+        }
+
         .point{
             padding:5rem 0;
             display: flex;
             flex-direction:column;
             ul{
                 li{
-                    width:fit-content;
+                    width:100% ;
                     padding:1rem 2rem;
                     font-size:2rem;
                     font-weight:bold;
@@ -319,17 +329,27 @@ welcome
                     margin-top: 1.3rem;
                 }
             }
+
+            .login-mobile{
+                display: block;
+                width: 100%;
+                margin: 2rem auto;
+                a{
+                    width: 80%;
+                    background: $submit;
+                    color:#fff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                
+                    height: 5rem;
+                    border-radius:10px;
+                    margin: 0 auto;
+                }
+            }
             
         }
     }
-
-    // .discription{
-    //     h3{
-    //         font-size:2rem;
-    //         font-weight:bold;
-    //         margin: 2rem 0;
-    //     }
-    // }
 }
 
 /*-------------------------------
@@ -486,17 +506,20 @@ home
                         display: flex;
                         justify-content: center;
                         align-items: center;
+                        margin-right: 1rem;
 
                             & .add-btn{
-                                width: 100px;
+                                width:fit-content;
                                 height: 30px;
-                                color:$add;
+                                padding:0 .2rem;
+                                color:$remove;
                             }
 
                             & .remove-btn{
-                                width: 100px;
+                                width: fit-content;
                                 height: 100%;
-                                color:$remove;
+                                color:$add;
+                                padding:0 .2rem;
                             }
                         }
 
@@ -546,6 +569,25 @@ home
                 filter:brightness(60%);
             }
 
+        }
+
+        & .push{
+
+            span{
+                display: block;
+                padding:.3rem;
+                width: 100%;
+                border-radius:5px;
+                background: $add;
+                color: #fff;
+                text-align: center;
+            }
+        }
+    }
+
+    @media screen and (max-width: 767px) {
+        .content-width {
+            width: 90%;
         }
     }
 }

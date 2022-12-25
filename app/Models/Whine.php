@@ -23,4 +23,9 @@ class Whine extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function sympathy_users(){
+        return $this->belongsToMany(User::class,'sympathys','whine_id','user_id');
+    }
+
 }

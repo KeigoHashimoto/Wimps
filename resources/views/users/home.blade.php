@@ -7,6 +7,10 @@
         @if(Session::has('success'))
             <p class="alert alert-success">{{ Session::get('success') }}</p>
         @endif
+        @if(Session::has('whine'))
+            <p class="alert alert-success">{{ Session::get('whine') }}</p>
+        @endif
+
 
         {{-- whine create modal window --}}
         <whine-create-modal></whine-create-modal>
