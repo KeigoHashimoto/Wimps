@@ -16,6 +16,9 @@ use App\Http\Controllers\SympathyController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+/**
+ * welcome
+ */
 Route::middleware(['guest:web'])->group(function(){
     Route::get('/',function(){
         return view('welcome');
