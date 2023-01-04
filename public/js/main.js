@@ -5,7 +5,7 @@ $('.animated').waypoint({
             this.destroy();
         }
     },
-    offset: '63%',
+    offset: '80%',
 });
 
 
@@ -17,6 +17,10 @@ function deleteConfirm(){
         alert('削除を中止しました。');
         this.event.preventDefault();
     }
+}
+
+function guestSympathy(){
+    alert('ゲストユーザーは共感ボタンを使用できません。会員登録してください。');
 }
 
 

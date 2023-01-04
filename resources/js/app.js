@@ -26,6 +26,7 @@ Vue.component('whine-create-modal', require('./components/WhineCreateModal.vue')
 Vue.component('user-edit-modal', require('./components/UserEditModal.vue').default);
 Vue.component('welcome', require('./components/Welcome.vue').default);
 Vue.component('push-component', require('./components/PushComponent.vue').default);
+Vue.component('reload-component', require('./components/reload.vue').default);
 
 
 /**
@@ -41,11 +42,4 @@ const app = new Vue({
             tab: "tab1",
         }
     },
-
-    methods:{
-        reload(){
-            window.location.reload();
-        },
-    },
-
 });

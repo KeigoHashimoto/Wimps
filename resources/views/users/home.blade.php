@@ -11,7 +11,6 @@
             <p class="alert alert-success">{{ Session::get('whine') }}</p>
         @endif
 
-
         {{-- whine create modal window --}}
         <whine-create-modal></whine-create-modal>
 

@@ -27,9 +27,14 @@
                         {{ $message }}
                     @enderror</p>
                 </div>
-                <button type="submit" class="submit-btn">Submit</button>
+                <button type="submit" class="submit-btn">ログイン</button>
+
                 <small>まだ登録していませんか？{{ link_to_route('user.register','register') }}</small>
             </form>
+
+            {{ Form::open(['route' => 'guestLogin']) }}
+                {{ Form::submit('登録しないで使用',['class' => 'submit-btn']) }}
+            {{ Form::close() }}
         </div>        
     </div>
 </div>

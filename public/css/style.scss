@@ -50,7 +50,7 @@ li{
 }
 
 .contents-size{
-    height: 100vh;
+    height: 120%;
     padding-bottom: 10%;
 }
 
@@ -431,6 +431,12 @@ header{
     }
 }
 
+@media screen and (max-width: 767px) {
+    header {
+        height: 20rem;
+    }
+}
+
 /*-------------------------------
 home
 ---------------------------------*/
@@ -715,8 +721,23 @@ setting
         word-break:break-word;
     }
 }
+.register-btn{
+    width: 20%;
+    height: 3rem;
+    max-width:50rem;
+    border-radius:7px;
+    background: $submit;
+    color:#fff;
+    display: block;
+    text-align: center;
+    margin-top: 3rem;
+}
 
-
+@media screen and (max-width: 767px) {
+    .register-btn {
+        width: 80%;
+    }
+}
 /*-------------------------------
 edit
 ---------------------------------*/

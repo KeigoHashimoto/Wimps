@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\WhinesController;
 use App\Http\Controllers\SympathyController;
+use Auth;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,7 +26,21 @@ Route::middleware(['guest:web'])->group(function(){
     });
 });
 
-//guest user function
+/**
+ * guest login
+ */
+Route::post('/login/guest',[UserController::class,'guestLogin'])->name('guestLogin');
+/**
+ * ゲストが会員登録したい場合
+ */
+Route::middleware(['auth'])->group(function(){
+    Route::get('register',function(){
+        Auth::logout();
+        return view('users.register');
+    })->name('guest.register');
+});
+
+//未ログインユーザ function
 Route::prefix('user')->name('user.')->group(function() {
     Route::middleware(['guest:web'])->group(function() {
         // register view

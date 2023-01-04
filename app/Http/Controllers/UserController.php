@@ -52,6 +52,14 @@ class UserController extends Controller
         }
     }
 
+    public function guestLogin()
+    {
+        if(Auth::attempt(['email' => 'guest@guest.com','password' => 'guestLogin'])){
+            return redirect()->route('user.home')->with('success','ゲストとしてログインしました。');
+        }else{
+            return false;
+        }
+    }
     /**
      * logout
      *
