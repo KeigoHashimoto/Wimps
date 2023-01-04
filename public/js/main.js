@@ -5,7 +5,7 @@ $('.animated').waypoint({
             this.destroy();
         }
     },
-    offset: '80%',
+    offset: '63%',
 });
 
 

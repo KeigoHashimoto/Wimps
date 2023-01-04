@@ -37,4 +37,7 @@
             <small>{{ $whine->created_at }}</small>
         </div>
     @endforeach
+
+    {{-- reload --}}
+    <reload-component></reload-component>
 </div>
