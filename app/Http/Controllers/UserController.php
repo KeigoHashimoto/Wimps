@@ -63,7 +63,7 @@ class UserController extends Controller
         }
     }
     /**
-     * logout
+     * logout 
      *
      * @return void
      */
