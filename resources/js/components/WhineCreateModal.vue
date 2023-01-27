@@ -29,7 +29,7 @@ export default {
         host(){
             const hostName=document.location.hostname;
             if(hostName == 'localhost'){
-                this.whinePost = '/whine/post';
+                this.whinePost = 'whine/post';
             }else{
                 this.whinePost = '/Wimps/whine/post';
             };

@@ -4,9 +4,6 @@
  * building robust, powerful web applications using Vue and Laravel.
  */
 
-const { default: axios } = require('axios');
-const { default: Echo } = require('laravel-echo');
-
 require('./bootstrap');
 
 window.Vue = require('vue').default;
@@ -22,12 +19,12 @@ window.Vue = require('vue').default;
 // const files = require.context('./', true, /\.vue$/i)
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
-Vue.component('whine-create-modal', require('./components/WhineCreateModal.vue').default);
-Vue.component('user-edit-modal', require('./components/UserEditModal.vue').default);
-Vue.component('welcome', require('./components/Welcome.vue').default);
+Vue.component('example-component', require('./components/ExampleComponent.vue').default);
 Vue.component('push-component', require('./components/PushComponent.vue').default);
 Vue.component('reload-component', require('./components/reload.vue').default);
-
+Vue.component('welcome', require('./components/Welcome.vue').default);
+Vue.component('whine-create-modal', require('./components/WhineCreateModal.vue').default);
+Vue.component('user-edit-model', require('./components/UserEditModal.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -37,9 +34,10 @@ Vue.component('reload-component', require('./components/reload.vue').default);
 
 const app = new Vue({
     el: '#app',
-    data() {
-        return {
-            tab: "tab1",
+
+    data(){
+        return{
+            tab:"tab1",
         }
-    },
+    }
 });
