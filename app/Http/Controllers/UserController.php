@@ -8,6 +8,7 @@ use App\Models\Whine;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
 
+
 class UserController extends Controller
 {
     /**
@@ -24,7 +25,7 @@ class UserController extends Controller
             'password' => 'required|min:6|max:16',
             'confirm' => 'required|same:password',
         ]);
-        $user = User::create([
+        User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),

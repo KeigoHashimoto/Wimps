@@ -12,7 +12,7 @@ class Whine extends Model
 {
     use HasFactory;
 
-    protected $fillable=[
+    protected $fillable = [
         'user_id',
         'whine',
         'ip',
@@ -20,12 +20,13 @@ class Whine extends Model
 
     protected $table = "whines";
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function sympathy_users(){
-        return $this->belongsToMany(User::class,'sympathys','whine_id','user_id');
+    public function sympathy_users()
+    {
+        return $this->belongsToMany(User::class, 'sympathy', 'whine_id', 'user_id');
     }
-
 }

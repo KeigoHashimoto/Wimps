@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use Auth;
+use App\Models\Whine;
+use Illuminate\Support\Facades\Auth;
 
 class SympathyController extends Controller
 {
@@ -22,7 +23,7 @@ class SympathyController extends Controller
 
     public function liked($whineId)
     {
-        $whine = Whine::findOrFail($id);
+        $whine = Whine::findOrFail($whineId);
         $whine->relationshipLoadCount();
     }
 }

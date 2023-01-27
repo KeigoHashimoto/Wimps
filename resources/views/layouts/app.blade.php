@@ -49,8 +49,9 @@
         <script src="https://use.fontawesome.com/releases/v5.7.2/js/all.js"></script>
 
         <!--main-javaScript-->
-        <script src="{{asset('js/main.js')}}"></script>
         <script src="{{asset('js/app.js')}}"></script>
+        <script src="{{asset('js/main.js')}}"></script>
+
 
     </body>
 </html>

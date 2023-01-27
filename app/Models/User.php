@@ -53,18 +53,19 @@ class User extends Authenticatable
 
     public function sympathy_whines()
     {
-        return $this->belongsToMany(Whine::class,'sympathys','user_id','whine_id');
+        return $this->belongsToMany(Whine::class, 'sympathy', 'user_id', 'whine_id');
     }
 
-    public function add_sympathy($whineId){
+    public function add_sympathy($whineId)
+    {
         // 自分の投稿かどうか
-        $its_mine=$this->id === $whineId;
+        $its_mine = $this->id === $whineId;
         //すでに共感しているか
-        $exists=$this->is_sympathyed($whineId);
-        if($its_mine || $exists){
+        $exists = $this->is_sympathyed($whineId);
+        if ($its_mine || $exists) {
             //自分の投稿　若しくは　すでに共感している場合
             return false;
-        }else{
+        } else {
             $this->sympathy_whines()->attach($whineId);
             return true;
         }
@@ -73,19 +74,19 @@ class User extends Authenticatable
     public function remove_sympathy($whineId)
     {
         // 自分の投稿かどうか
-        $its_mine=$this->id === $whineId;
+        $its_mine = $this->id === $whineId;
         //すでに共感しているか
-        $exists=$this->is_sympathyed($whineId);
-        if($exists && !$its_mine){
+        $exists = $this->is_sympathyed($whineId);
+        if ($exists && !$its_mine) {
             $this->sympathy_whines()->detach($whineId);
             return true;
-        }else{
+        } else {
             return false;
         }
     }
 
     public function is_sympathyed($whineId)
     {
-        return $this->sympathy_whines()->where('whine_id','=',$whineId)->exists();
+        return $this->sympathy_whines()->where('whine_id', '=', $whineId)->exists();
     }
 }

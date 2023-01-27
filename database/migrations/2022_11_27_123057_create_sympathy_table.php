@@ -13,7 +13,7 @@ class CreateSympathyTable extends Migration
      */
     public function up()
     {
-        Schema::create('sympathys', function (Blueprint $table) {
+        Schema::create('sympathy', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('whine_id');
@@ -32,9 +32,9 @@ class CreateSympathyTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('sympathys',function(Blueprint $table){
-            $table->dropForeign('sympathys_user_id_foreign');
-            $table->dropForeign('sympathys_whine_id_foreign');
+        Schema::dropIfExists('sympathy', function (Blueprint $table) {
+            $table->dropForeign('sympathy_user_id_foreign');
+            $table->dropForeign('sympathy_whine_id_foreign');
         });
     }
 }

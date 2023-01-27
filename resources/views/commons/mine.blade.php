@@ -8,7 +8,7 @@
             @foreach($mines as $whine)
                 <div class="whine-wrap animated">
                     <div class="whine">
-                        <p>{!! nl2br(e($whine->whine)) !!}</p>
+                        <p>{!! $whine->whine !!}</p>
                         <div class="icons">
                             <div class="sympathy">
                                 @if(!Auth::user()->is_sympathyed($whine->id))
