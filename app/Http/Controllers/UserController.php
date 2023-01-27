@@ -43,9 +43,11 @@ class UserController extends Controller
         $request->validate([
             'email' => 'required|email',
             'password' => 'required|min:6|max:16',
+            
         ]);
         $roles = $request->only('email','password');
-        if(Auth::attempt($roles)){
+        if(Auth::attempt($roles))
+        {
             return redirect()->route('user.home')->with('success',"おかえりなさい。".Auth::user()->name."さん");
         }else{
             return redirect()->back()->with('error','ログインに失敗しました。再度ログインしてください。');
